@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt | NOVADEV Studio</title>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand-name" href="../index.html">NOVADEV Studio</a>
+
+      <nav class="nav-links">
+        <a href="leistungen.html">Leistungen</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="about.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+
+      <a class="btn btn-primary" href="#">Anfragen</a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="contact-page">
+
+    <section class="contact-section">
+      <div class="container">
+
+        <div class="contact-header">
+          <h1>Projekt starten</h1>
+          <p>Erzähl mir kurz, was du brauchst — ich melde mich schnell bei dir.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- FORMULAR -->
+          <form class="contact-form">
+
+            <div class="input-group">
+              <label>Name</label>
+              <input type="text" placeholder="Name" required>
+            </div>
+
+            <div class="input-group">
+              <label>E-Mail</label>
+              <input type="email" placeholder="deine@email.at" required>
+            </div>
+
+            <div class="input-group">
+            <label>Projekt</label>
+
+            <input 
+                type="text" 
+                list="projekt-optionen" 
+                placeholder="Bitte wählen oder eingeben" 
+                required
+            >
+
+            <datalist id="projekt-optionen">
+                <option value="Landingpage">
+                <option value="Business Website">
+                <option value="Premium Website">
+                <option value="Individual Webiste"></option>
+            </datalist>
+            </div>
+
+            <div class="input-group">
+              <label>Nachricht</label>
+              <textarea rows="5" placeholder="Beschreibe dein Projekt..."></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+              Anfrage senden
+            </button>
+
+          </form>
+
+          <!-- SIDE INFO -->
+          <div class="contact-info">
+
+            <h2>Warum NOVADEV?</h2>
+
+            <ul>
+              <li>Schnelle Umsetzung</li>
+              <li>Modernes Design</li>
+              <li>Individuelle Lösungen</li>
+              <li>Direkter Kontakt</li>
+            </ul>
+
+            <div class="contact-box">
+              <p><strong>E-Mail</strong></p>
+              <p>kontakt@novadev-studio.at</p>
+            </div>
+
+            <div class="contact-box">
+              <p><strong>Antwortzeit</strong></p>
+              <p>innerhalb von 24h</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
