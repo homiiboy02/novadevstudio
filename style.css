@@ -314,6 +314,7 @@ footer {
 
 /* PRICE PREVIEW */
 .price-preview {
+  display: block;
   margin: 22px 0 26px;
   padding: 18px;
   border-radius: 18px;
@@ -323,14 +324,16 @@ footer {
 
 .price-preview span {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
 .price-preview strong {
+  display: block;
   font-size: 1.35rem;
   color: white;
+  line-height: 1.3;
 }
 
 /* ===================== */
