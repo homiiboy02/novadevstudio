@@ -273,6 +273,66 @@ footer {
   font-weight: 900;
 }
 
+.category-title {
+  font-size: 2rem;
+  margin: 60px 0 20px;
+}
+
+/* VERWALTUNG / CARE CARDS */
+.management-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.management-grid .pricing-card {
+  min-height: 100%;
+}
+
+.management-grid .price {
+  font-size: 2rem;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.management-grid .badge {
+  top: 24px;
+  right: 24px;
+}
+
+.management-grid .pricing-card h2 {
+  max-width: 70%;
+}
+
+@media (max-width: 1100px) {
+  .management-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .management-grid .pricing-card h2 {
+    max-width: 100%;
+  }
+}
+
+/* PRICE PREVIEW */
+.price-preview {
+  margin: 22px 0 26px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.price-preview span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.price-preview strong {
+  font-size: 1.35rem;
+  color: white;
+}
+
 /* ===================== */
 /* CONTACT */
 /* ===================== */

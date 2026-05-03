@@ -43,35 +43,59 @@
 
             <div class="input-group">
               <label>Name</label>
-              <input type="text" placeholder="Name" required>
+              <input type="text" name="name" placeholder="Name" required>
             </div>
 
             <div class="input-group">
               <label>E-Mail</label>
-              <input type="email" placeholder="deine@email.at" required>
+              <input type="email" name="email" placeholder="deine@email.at" required>
             </div>
 
             <div class="input-group">
-            <label>Projekt</label>
+              <label>Projekt</label>
 
-            <input 
+              <input 
                 type="text" 
+                name="projekt"
                 list="projekt-optionen" 
                 placeholder="Bitte wählen oder eingeben" 
                 required
-            >
+              >
 
-            <datalist id="projekt-optionen">
+              <datalist id="projekt-optionen">
                 <option value="Landingpage">
                 <option value="Business Website">
                 <option value="Premium Website">
-                <option value="Individual Webiste"></option>
-            </datalist>
+                <option value="Individual Website">
+              </datalist>
+            </div>
+
+            <div class="input-group">
+              <label>Verwaltung</label>
+
+              <input 
+                type="text" 
+                name="verwaltung"
+                list="verwaltung-optionen" 
+                placeholder="Bitte wählen oder eingeben"
+              >
+
+              <datalist id="verwaltung-optionen">
+                <option value="Keine">
+                <option value="Basic Care">
+                <option value="Business Care">
+                <option value="Premium Care">
+              </datalist>
+            </div>
+
+            <div class="price-preview">
+              <span>Geschätzter Preis</span>
+              <strong id="price-output">Bitte Projekt auswählen</strong>
             </div>
 
             <div class="input-group">
               <label>Nachricht</label>
-              <textarea rows="5" placeholder="Beschreibe dein Projekt..."></textarea>
+              <textarea name="nachricht" rows="5" placeholder="Beschreibe dein Projekt..."></textarea>
             </div>
 
             <button class="btn btn-primary" type="submit">
@@ -109,6 +133,9 @@
     </section>
 
   </main>
+
+  <!-- ✅ SCRIPT RICHTIG PLATZIERT -->
+  <script src="../main.js"></script>
 
 </body>
 </html>
