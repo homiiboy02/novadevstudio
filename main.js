@@ -1,6 +1,8 @@
 const projektInput = document.querySelector('input[name="projekt"]');
 const verwaltungInput = document.querySelector('input[name="verwaltung"]');
 const priceOutput = document.getElementById("price-output");
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
 
 const projektPreise = {
   "Landingpage": 599,
@@ -42,3 +44,7 @@ if (projektInput && verwaltungInput && priceOutput) {
   verwaltungInput.addEventListener("input", updatePrice);
   updatePrice();
 }
+
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});

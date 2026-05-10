@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NOVADEV Studio</title>
+  <title>NovaDev Studio</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,19 +16,30 @@
   <header class="navbar">
     <div class="container nav-inner">
 
-      <!-- 🔥 BRAND (VARIANTE 3) -->
       <a class="brand-name" href="/">
-        NOVADEV Studio
+        <span class="accent">&lt;</span>
+        Nova<span class="dev">Dev</span> Studio
+        <span class="accent">/&gt;</span>
       </a>
 
-      <nav class="nav-links">
+      <!-- BURGER BUTTON -->
+      <button class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
         <a href="/leistungen/">Leistungen</a>
         <a href="/projekte/">Projekte</a>
         <a href="/about/">Über mich</a>
         <a href="/kontakt/">Kontakt</a>
       </nav>
 
-      <a class="btn btn-primary" href="/kontakt/">Anfragen</a>
+      <a class="btn btn-primary desktop-btn" href="/kontakt/">
+        Projekt starten
+      </a>
+
     </div>
   </header>
 
@@ -37,7 +51,7 @@
       <div class="container hero-content">
 
         <!-- LOGO -->
-        <img src="assets/Logo.png" alt="Logo" class="hero-logo">
+        <img src="assets/Logo.png" alt="NovaDev Studio Logo" class="hero-logo">
 
         <h1>
           Professionelle Websites mit <br>
@@ -45,13 +59,17 @@
         </h1>
 
         <p>
-          Ich entwickle moderne Websites für Unternehmen und Selbstständige.
+          Ich entwickle maßgeschneiderte digitale Lösungen für Unternehmen und Selbstständige.
         </p>
 
         <a class="btn btn-primary" href="/kontakt/">Projekt starten</a>
+        <a class="btn btn-primary" href="/projekte/">Projekte ansehen</a>
       </div>
     </section>
   </main>
+
+  <!-- ✅ SCRIPT RICHTIG PLATZIERT -->
+  <script src="../main.js"></script>
 
   <!-- FOOTER -->
   <footer>
