@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Danke | NovaDev Studio</title>
+
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a class="brand-name" href="/">
+        <span class="accent">&lt;</span>
+        Nova<span class="dev">Dev</span> Studio
+        <span class="accent">/&gt;</span>
+      </a>
+
+      <button class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="/leistungen/">Leistungen</a>
+        <a href="/projekte/">Projekte</a>
+        <a href="/about/">Über mich</a>
+        <a href="/kontakt/">Kontakt</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="contact-page">
+
+    <section class="contact-section">
+      <div class="container">
+
+        <div 
+          style="
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 32px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+          "
+        >
+
+          <div 
+            style="
+              width: 90px;
+              height: 90px;
+              margin: 0 auto 30px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(135deg, #ff2d2d, #b11226);
+              font-size: 2rem;
+              box-shadow: 0 0 40px rgba(255,45,45,0.4);
+            "
+          >
+            ✓
+          </div>
+
+          <h1 style="margin-bottom: 20px;">
+            Anfrage erfolgreich gesendet
+          </h1>
+
+          <p 
+            style="
+              color: var(--muted);
+              line-height: 1.8;
+              margin-bottom: 40px;
+              font-size: 1.05rem;
+            "
+          >
+            Vielen Dank für deine Anfrage.  
+            Ich melde mich normalerweise innerhalb von 24 Stunden bei dir zurück.
+          </p>
+
+          <a class="btn btn-primary" href="/">
+            Zur Startseite
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/main.js"></script>
+
+</body>
+</html>
