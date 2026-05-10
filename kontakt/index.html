@@ -53,16 +53,22 @@
         <div class="contact-grid">
 
           <!-- FORMULAR -->
-          <form class="contact-form">
+          <form 
+          class="contact-form"
+          action="https://formspree.io/f/mlgzozjb"
+          method="POST"
+          >
+
+            <input type="hidden" name="_subject" value="Neue Anfrage über NovaDev Studio">
 
             <div class="input-group">
               <label>Name</label>
-              <input type="text" name="name" placeholder="Name" required>
+              <input type="text" name="name" placeholder="Vor und Nachname" required>
             </div>
 
             <div class="input-group">
               <label>E-Mail</label>
-              <input type="email" name="email" placeholder="deine@email.at" required>
+              <input type="email" name="email" placeholder="E-Mail" required>
             </div>
 
             <div class="input-group">
