@@ -1,50 +1,100 @@
-const projektInput = document.querySelector('input[name="projekt"]');
-const verwaltungInput = document.querySelector('input[name="verwaltung"]');
-const priceOutput = document.getElementById("price-output");
-const burger = document.getElementById("burger");
-const navLinks = document.getElementById("navLinks");
+document.addEventListener("DOMContentLoaded", () => {
+  const projektInput = document.querySelector('input[name="projekt"]');
+  const verwaltungInput = document.querySelector('input[name="verwaltung"]');
+  const priceOutput = document.getElementById("price-output");
+  const burger = document.getElementById("burger");
+  const navLinks = document.getElementById("navLinks");
+  const contactForm = document.getElementById("contactForm");
 
-const projektPreise = {
-  "Landingpage": 599,
-  "Business Website": 999,
-  "Premium Website": 1299
-};
+  const projektPreise = {
+    "Landingpage": 599,
+    "Business Website": 999,
+    "Premium Website": 1299
+  };
 
-const verwaltungPreise = {
-  "Keine": 0,
-  "Basic Care": 29,
-  "Business Care": 59,
-  "Premium Care": 99
-};
+  const verwaltungPreise = {
+    "Keine": 0,
+    "Basic Care": 29,
+    "Business Care": 59,
+    "Premium Care": 99
+  };
 
-function updatePrice() {
-  if (!projektInput || !verwaltungInput || !priceOutput) return;
+  function updatePrice() {
+    if (!projektInput || !verwaltungInput || !priceOutput) return;
 
-  const projekt = projektInput.value;
-  const verwaltung = verwaltungInput.value || "Keine";
+    const projekt = projektInput.value;
+    const verwaltung = verwaltungInput.value || "Keine";
 
-  const projektPreis = projektPreise[projekt];
-  const verwaltungPreis = verwaltungPreise[verwaltung];
+    const projektPreis = projektPreise[projekt];
+    const verwaltungPreis = verwaltungPreise[verwaltung];
 
-  if (!projektPreis) {
-    priceOutput.textContent = "Bitte Projekt auswählen";
-    return;
+    if (!projektPreis) {
+      priceOutput.textContent = "Bitte Projekt auswählen";
+      return;
+    }
+
+    if (!verwaltung || verwaltung === "Keine" || verwaltungPreis === 0) {
+      priceOutput.textContent = `ab ${projektPreis}€ einmalig`;
+      return;
+    }
+
+    priceOutput.textContent = `ab ${projektPreis}€ einmalig + ${verwaltungPreis}€/Monat`;
   }
 
-  if (!verwaltung || verwaltung === "Keine" || verwaltungPreis === 0) {
-    priceOutput.textContent = `ab ${projektPreis}€ einmalig`;
-    return;
+  if (projektInput && verwaltungInput && priceOutput) {
+    projektInput.addEventListener("input", updatePrice);
+    verwaltungInput.addEventListener("input", updatePrice);
+    updatePrice();
   }
 
-  priceOutput.textContent = `ab ${projektPreis}€ einmalig + ${verwaltungPreis}€/Monat`;
-}
+  if (burger && navLinks) {
+    burger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
 
-if (projektInput && verwaltungInput && priceOutput) {
-  projektInput.addEventListener("input", updatePrice);
-  verwaltungInput.addEventListener("input", updatePrice);
-  updatePrice();
-}
+  if (navLinks) {
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  }
 
-burger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton ? submitButton.textContent : "";
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Wird gesendet...";
+      }
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if (response.ok) {
+          window.location.href = "/success/";
+        } else {
+          alert("Die Anfrage konnte leider nicht gesendet werden. Bitte versuche es erneut.");
+        }
+      } catch (error) {
+        alert("Es ist ein Fehler aufgetreten. Bitte versuche es erneut.");
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      }
+    });
+  }
 });
