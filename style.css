@@ -856,6 +856,38 @@ h1 {
   background: rgba(255,255,255,0.05);
 }
 
+/* ===================== */
+/* HOSTING & MAIL */
+/* ===================== */
+
+.hosting-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hosting-grid .pricing-card {
+  min-height: 100%;
+}
+
+.hosting-grid .price {
+  font-size: 2rem;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.hosting-grid .pricing-card h2 {
+  max-width: 75%;
+}
+
+@media (max-width: 1100px) {
+  .hosting-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hosting-grid .pricing-card h2 {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 700px) {
 
   .legal-card {

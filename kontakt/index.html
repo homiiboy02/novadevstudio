@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kontakt | NOVADEV Studio</title>
+
   <link rel="icon" type="image/png" href="../assets/favicon.png">
   <link rel="stylesheet" href="../style.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
  <!-- NAVBAR -->
@@ -47,7 +51,10 @@
 
         <div class="contact-header">
           <h1>Projekt starten</h1>
-          <p>Erzähl mir kurz, was du brauchst — ich melde mich schnell bei dir.</p>
+
+          <p>
+            Erzähl mir kurz, was du brauchst — ich melde mich schnell bei dir.
+          </p>
         </div>
 
         <div class="contact-grid">
@@ -59,16 +66,33 @@
             action="https://formspree.io/f/mlgzozjb"
             method="POST"
           >
-            <input type="hidden" name="_subject" value="Neue Anfrage über NovaDev Studio">
+
+            <input 
+              type="hidden" 
+              name="_subject" 
+              value="Neue Anfrage über NovaDev Studio"
+            >
 
             <div class="input-group">
               <label>Name</label>
-              <input type="text" name="name" placeholder="Vor und Nachname" required>
+
+              <input 
+                type="text" 
+                name="name" 
+                placeholder="Vor und Nachname" 
+                required
+              >
             </div>
 
             <div class="input-group">
               <label>E-Mail</label>
-              <input type="email" name="email" placeholder="E-Mail" required>
+
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="E-Mail" 
+                required
+              >
             </div>
 
             <div class="input-group">
@@ -108,14 +132,43 @@
               </datalist>
             </div>
 
-            <div class="price-preview">
-              <span>Geschätzter Preis</span>
-              <strong id="price-output">Bitte Projekt auswählen</strong>
+            <!-- HOSTING -->
+            <div class="input-group">
+              <label>Hosting & Mail</label>
+
+              <input 
+                type="text" 
+                name="hosting"
+                list="hosting-optionen" 
+                placeholder="Bitte wählen oder eingeben"
+              >
+
+              <datalist id="hosting-optionen">
+                <option value="Kein Hosting">
+                <option value="Starter Hosting">
+                <option value="Business Hosting">
+                <option value="Premium Infrastructure">
+              </datalist>
             </div>
 
+            <!-- PREVIEW -->
+            <div class="price-preview">
+              <span>Geschätzter Preis</span>
+
+              <strong id="price-output">
+                Bitte Projekt auswählen
+              </strong>
+            </div>
+
+            <!-- NACHRICHT -->
             <div class="input-group">
               <label>Nachricht</label>
-              <textarea name="nachricht" rows="5" placeholder="Beschreibe dein Projekt..."></textarea>
+
+              <textarea 
+                name="nachricht" 
+                rows="5" 
+                placeholder="Beschreibe dein Projekt..."
+              ></textarea>
             </div>
 
             <button class="btn btn-primary" type="submit">
@@ -147,7 +200,7 @@
               target="_blank"
             >
               <p><strong>Instagram</strong></p>
-              <p>@Novadev Studio</p>
+              <p>@novadev_webdev</p>
             </a>
 
             <div class="contact-box">
@@ -163,7 +216,6 @@
 
   </main>
 
-  <!-- ✅ SCRIPT RICHTIG PLATZIERT -->
   <script src="../main.js"></script>
 
 </body>
